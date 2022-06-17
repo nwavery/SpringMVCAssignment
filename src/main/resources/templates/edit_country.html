@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:th="http://www.thymeleaf.org" > 
+<head>
+<meta charset="ISO-8859-1">
+<title>My Country Wiki</title>
+</head>
+<body>
+<form action="#" th:action="@{/save}" th:object="${country}" method="post">
+
+Id: <input type="text" th:field="*{id}" readonly="readonly"/><br>
+
+Name: <input type="text" th:field="*{name}" readonly="readonly"/><br>
+
+Capital: <input type="text" th:field="*{capital}" readonly="readonly"/><br>
+
+Continent: <input type="text" th:field="*{continent}" readonly="readonly"/><br>
+
+Population: <input type="text" th:field="*{population}"/><br>
+
+<button type="submit"> Save Population </button>
+<button type="submit"> View List </button>
+</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:th="http://www.thymeleaf.org" >
+<head>
+<meta charset="ISO-8859-1">
+<title>My Country Wiki</title>
+</head>
+<body>
+<h1>List of Countries</h1>
+<h2>
+<table>
+
+<tr th:each="country : ${countries}">
+
+<td th:text="${country.id}"> </td>
+
+<td> <a th:href="@{/edit/{id}(id=${country.id})}" th:text="${country.name}"> </a>
+</tr>
+<tr><a href="/countryWiki/new">Click here to add a new Country</a></tr>
+</table>
+</h2>
+</body>
+</html>
